@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="task1.css" />
+    <title>Task Management</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task Management</h1>
+
+      <div id="user-container">
+        <input type="text" id="user-name" placeholder="Enter your name..." />
+        <button onclick="saveUserName()">Save Name</button>
+        <p id="user-display"></p>
+      </div>
+
+      <div id="mode-toggle">
+        <button onclick="toggleMode()">Toggle Dark/Light Mode</button>
+      </div>
+
+      <div id="progress-container">
+        <h3>Task Progress</h3>
+        <progress id="progress-bar" value="0" max="100"></progress>
+      </div>
+
+      <div id="task-filter">
+        <button onclick="filterTasks('pending')">Pending Tasks</button>
+        <button onclick="filterTasks('completed')">Completed Tasks</button>
+      </div>
+
+      <div id="tasks-container"></div>
+      <div id="add-task-container">
+        <input
+          type="text"
+          id="new-task-name"
+          placeholder="Enter task name..."
+        />
+        <input
+          type="text"
+          id="new-task-description"
+          placeholder="Enter task description..."
+        />
+        <button onclick="addTask()">Add</button>
+      </div>
+    </div>
+    <script src="task1.js"></script>
+  </body>
+</html>
